@@ -8,12 +8,11 @@ Created on Fri Dec 23 13:29:08 2022
 import pandas as pd
 import math
 
-def day_11():
-    monkey_list, lcm_div = read_input_data(div_3=False)
+def day_11(rounds=10000, div_3=False):
+    monkey_list, lcm_div = read_input_data(div_3=div_3)
     lcm_final = 1
     for num in lcm_div:
         lcm_final = lcm(lcm_final,num)
-    rounds=10000
     for i in range(rounds):
         for i in range(len(monkey_list)):
             monkey_list[i].inspections()
